@@ -24,7 +24,7 @@ const createOption = label => ({
 const createUpdateRole = async (newOption, config) => {
   try {
     const resultOfPost = await axios.post(
-      "https://localhost:5001/api/role",
+      "https://remnzallocation.azurewebsites.net/api/role",
       {
         name: newOption.label,
         clientid: parseInt(localStorage.getItem("decoded"))
@@ -115,7 +115,7 @@ class CreateRole extends React.Component {
     const item = this.state.data.find(i => i.id === subskillid);
     axios
       .put(
-        `https://localhost:5001/api/forolesubskill/${
+        `https://remnzallocation.azurewebsites.net/api/forolesubskill/${
           this.state.roleid
         }/${subskillid}/${localStorage.getItem("decoded")}/${Number(
           item.proficiency
@@ -201,7 +201,7 @@ class CreateRole extends React.Component {
 
     console.log(this.state.subskillid);
     axios
-      .post("https://localhost:5001/api/forolesubskill", {
+      .post("https://remnzallocation.azurewebsites.net/api/forolesubskill", {
         clientid: parseInt(localStorage.getItem("decoded")),
         roleid: this.state.roleid,
         subskillid: subskillid

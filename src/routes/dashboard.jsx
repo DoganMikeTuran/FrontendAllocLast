@@ -20,19 +20,19 @@ var dashRoutes = [
   },
   {
     path: "/createskill",
-    name: "Create Skill",
+    name: "Skill Library",
     icon: "design_app",
     component: CreateSkill
   },
   {
     path: "/createrole",
-    name: "Create Role",
+    name: "Role Library",
     icon: "design_app",
     component: CreateRole
   },
   {
     path: "/createproject",
-    name: "Create Project",
+    name: "Project Library",
     icon: "design_app",
     component: CreateProject
   },

@@ -57,6 +57,9 @@
     "reactstrap": "6.4.0",
     "styled-components": "^5.0.1"
   },
+  "engines": {
+    "node": "10.0"
+  },
   "scripts": {
     "build-css": "node-sass-chokidar --include-path ./src --include-path ./node_modules src/ -o src/",
     "watch-css": "npm run build-css && node-sass-chokidar --include-path ./src --include-path ./node_modules src/ -o src/ --watch --recursive",

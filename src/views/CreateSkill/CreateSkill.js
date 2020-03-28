@@ -73,7 +73,7 @@ const apiFacadeGetDataUserSubSkill = async subskillid => {
 const createUpdate = async (newOption, config) => {
   try {
     await axios.post(
-      "https://localhost:5001/api/skill",
+      "https://remnzallocation.azurewebsites.net/api/skill",
       {
         name: newOption.label,
         clientid: parseInt(localStorage.getItem("decoded"))
@@ -101,7 +101,7 @@ const apiFacadeGetDataSubSkill = async newSkillid => {
 const createUpdateSubSkill = async (newOption, config, newSkillid) => {
   try {
     await axios.post(
-      "https://localhost:5001/api/subskill",
+      "https://remnzallocation.azurewebsites.net/api/subskill",
       {
         name: newOption.label,
         clientid: parseInt(localStorage.getItem("decoded")),
@@ -141,7 +141,7 @@ class CreateSkill extends React.Component {
     const item = this.state.data.find(i => i.id === userId);
     axios
       .put(
-        `https://localhost:5001/api/usersubskill/${userId}/${
+        `https://remnzallocation.azurewebsites.net/api/usersubskill/${userId}/${
           this.state.subskillid
         }/${localStorage.getItem("decoded")}/${Number(item.proficiency)}`
       )
@@ -195,7 +195,7 @@ class CreateSkill extends React.Component {
   };
   Subscribe = userid => {
     axios
-      .post("https://localhost:5001/api/usersubskill", {
+      .post("https://remnzallocation.azurewebsites.net/api/usersubskill", {
         clientid: parseInt(localStorage.getItem("decoded")),
         userid: userid,
         subskillid: this.state.subskillid

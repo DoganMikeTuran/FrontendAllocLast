@@ -28,7 +28,7 @@ class CreateUser extends Component {
 
     axios
       .post(
-        "https://localhost:5001/api/empusers",
+        "https://allocatingbackend20200128084940.azurewebsites.net/api/empusers",
         {
           firstname: this.state.firstname,
           lastname: this.state.lastname,

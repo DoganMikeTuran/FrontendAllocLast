@@ -78,7 +78,7 @@ const apiFacadeGetDataTracksByProject = async projectid => {
 const createUpdateProject = async (newOption, config) => {
   try {
     await axios.post(
-      "https://localhost:5001/api/prproject",
+      "https://remnzallocation.azurewebsites.net/api/prproject",
       {
         name: newOption.label,
         clientid: parseInt(localStorage.getItem("decoded"))
@@ -107,7 +107,7 @@ const apiFacadeGetDataTrack = async newSkillid => {
 const createUpdateTrack = async (newOption, config, newSkillid) => {
   try {
     await axios.post(
-      "https://localhost:5001/api/track",
+      "https://remnzallocation.azurewebsites.net/api/track",
       {
         name: newOption.label,
         clientid: parseInt(localStorage.getItem("decoded")),
@@ -194,7 +194,7 @@ class CreateProject extends React.Component {
   };
   Subscribe = trackid => {
     axios
-      .post("https://localhost:5001/api/trackrole", {
+      .post("https://remnzallocation.azurewebsites.net/api/trackrole", {
         clientid: parseInt(localStorage.getItem("decoded")),
         trackId: this.state.subskillid,
         roleId: trackid
